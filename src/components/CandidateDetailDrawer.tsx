@@ -40,7 +40,7 @@ export default function CandidateDetailDrawer({ open, onClose, candidate }: Prop
 
           <Divider>Q&A</Divider>
           <Table
-            rowKey={(r: any, i: number) => `${i}`}
+            rowKey={(_, index) => `${index}`}
             columns={columnsQA}
             dataSource={(candidate.qas || []).map((q, i) => ({ idx: i + 1, ...q }))}
             pagination={{ pageSize: 5 }}
@@ -50,7 +50,7 @@ export default function CandidateDetailDrawer({ open, onClose, candidate }: Prop
 
           <Divider>Chat History</Divider>
           <Table
-            rowKey={(r: any, i: number) => `${i}`}
+            rowKey={(_, index) => `${index}`}
             columns={columnsChat}
             dataSource={candidate.chatHistory}
             pagination={{ pageSize: 6 }}
