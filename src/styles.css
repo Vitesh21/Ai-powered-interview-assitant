@@ -1,0 +1,10 @@
+html, body, #root { height: 100%; margin: 0; }
+* { box-sizing: border-box; }
+
+:root {
+  --bg: #f5f7fb;
+}
+
+body { background: var(--bg); }
+
+.ant-layout { background: var(--bg); }
